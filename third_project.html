@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        background: rgb(245, 241, 241);
+      }
+      #header {
+        position: fixed;
+        top: 0;
+      }
+      #nav-bar {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+      #contaner {
+        /* border: 1px solid black; */
+        /* padding-left: 30vw; */
+        margin-left: 30vw;
+        margin-right: 30vw;
+      }
+     
+      #email {
+        padding-left: 2vw;
+      }
+      .btn {
+        background: hsl(39, 97%, 44%);
+        padding: 0px 20px 0px 20px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        border: hsl(39, 97%, 44%);
+      }
+      .btn:hover {
+        background-color: hsl(39, 97%, 50%);
+        border: hsl(39, 97%, 50%);
+      }
+      .btn:focus {
+        background-color: hsl(39, 97%, 50%);
+        border: hsl(39, 97%, 50%);
+      }
+      a {
+        color: rgb(78, 76, 76);
+        text-decoration: none;
+      }
+      #feature {
+        padding: 10px;
+        padding-top: 1px;
+      }
+      #video {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+      }
+      .label{
+        font-size: larger;
+      }
+      @media all and (min-width: 319px){
+        #header-img {
+          width: 70%;
+        }
+        #nav-bar {
+          position: absolute;
+          top: 28px;
+          right: 40px;
+        }
+        strong{
+        margin-left: 0;
+        padding: 0;
+        }
+        #form {
+          padding-top: 15%;
+          /* border: 1px solid black; */
+        }
+        #price-box {
+          /* border: 1px solid black; */
+          width: auto;
+          display: flex;
+          flex-direction: column;
+          justify-items: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        .box{
+          width: 80vw;
+        }
+      }
+      @media all and (min-width: 425px){
+        #header-img {
+          width: 70%;
+        }
+        #nav-bar {
+          position: absolute;
+          top: 28px;
+          right: 40px;
+        }
+        #form {
+          padding-top: 15%;
+          /* border: 1px solid black; */
+        }
+        #price-box {
+          /* border: 1px solid black; */
+          width: auto;
+          display: flex;
+          flex-direction: column;
+          justify-items: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        .box{
+          width: 60vw;
+        }
+      }
+      .box {
+        background-color: rgb(207, 202, 202);
+        /* border: 1px solid black; */
+
+        border-radius: 5px;
+        /* width: 400px; */
+        padding-left: 20px;
+        height: auto;
+        text-align: center;
+        margin-top: 1rem;
+        padding: 5px;
+        align-items: center;
+      }
+      .medium-price2 {
+        /* margin-left: 2rem; */
+      }
+      .box ol li {
+        list-style: none;
+        padding: 10px;
+        padding-left: 0px;
+      }
+      .box ol .btn{
+        margin-left: -5%;
+        padding: 5px;
+      }
+      #footer {
+        text-align: end;
+      }
+      @media all and (min-width: 768px) {
+        #form {
+          padding-top: 10%;
+          /* border: 1px solid black; */
+        }
+        #header-img {
+          width: 40%;
+        }
+        #nav-bar {
+          position: absolute;
+          top: 15px;
+          right: 70px;
+        }
+        #submit {
+          margin-top: 5px;
+          margin-left: 8vw;
+        }
+        #email {
+          margin-top: 5px;
+          margin-left: 5vw;
+        }
+        #price-box {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          margin-bottom: 40px;
+        }
+        .box {
+          border: 1px solid black;
+          border-radius: 5px;
+          flex-basis: 200px;
+          text-align: center;
+        }
+        .box {
+        /* margin-left: 20px; */
+        /* max-width: 30vw; */
+        width: 400px;
+        }
+      }
+      /*       strong{
+        font-size: x-large;
+      }
+      #email{
+        width: 20vw;
+        height: 30px;
+        font-size: large;
+        padding-left: 5px;
+      } */
+    </style>
+  </head>
+  <body>
+    <header id="header">
+       
+      <img
+        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
+        alt="logo of compony"
+        id="header-img"
+      />
+       
+      <nav id="nav-bar">
+          <a href="#feature" class="nav-link">Feature</a>  
+        <a href="#video" class="nav-link">How it Work</a>  
+        <a href="#price-box" class="nav-link">pricing</a>
+      </nav>
+    </header>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <section id="contaner">
+         
+        <label for="email"
+          ><strong>Handcrafted, home-made masterpieces</strong></label
+        ><br />
+         
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email address"
+          required
+        />
+        <br />
+         
+        <input type="submit" value="Get Start" id="submit" class="btn" /><br />
+      </section>
+    </form>
+    <div id="feature">
+       
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus est
+          nulla ex vel? Ipsa distinctio a deleniti, aspernatur nemo, sapiente
+          voluptatibus tenetur ut sit dolores repudiandae quo ipsam quaerat
+          facere numquam officiis. Voluptates atque aliquam maiores consectetur,
+          nulla, nemo excepturi optio nesciunt accusamus vitae inventore
+          deserunt, ea quia mollitia. Ipsam inventore, eius tenetur natus
+          ducimus in accusamus quis blanditiis molestias dolorum fugiat ipsa
+          alias quisquam asperiores saepe nobis earum debitis dolore a iste qui
+          nihil recusandae numquam iusto. Quos laborum repellendus, facere
+          ratione, quo eum veritatis libero molestiae velit fugit saepe, porro
+          hic quasi cum. Fuga error recusandae accusamus adipisci.
+        </p>
+      </section>
+    </div>
+    <!--   <video id="video" width="320px" height="240px" controls preload="auto">
+            <source src="https://youtu.be/y8Yv4pnO7qc">
+          </video> -->
+    <div class="video">
+      <iframe
+        id="video"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?real=0&contorols=0&showinfo=0"
+        frameborder="2px"
+        allowfullscreen
+      ></iframe>
+    </div>
+     
+    <div id="price-box">
+         
+      <div class="box low-price1">
+        <label class="low-label label">TENOR TROMBONE</label>
+        <h2>$600</h2>
+        <ol>
+          <li>Lorem, ipsum.</li>
+          <li>Lorem, ipsum.</li>
+          <li>Lorem, ipsum dolor.</li>
+          <li>Lorem, ipsum.</li>
+          <button class="btn">select</button>
+        </ol>
+      </div>
+         
+      <div class="box medium-price2">
+        <label class="medium-label label">BASS TROMBONE</label>
+        <h2>$900</h2>
+        <ol>
+          <li>Lorem, ipsum.</li>
+          <li>Lorem, ipsum.</li>
+          <li>Lorem, ipsum dolor.</li>
+          <li>Lorem, ipsum.</li>
+          <button class="btn">select</button>
+        </ol>
+      </div>
+         
+      <div class="box high-price3">
+        <label class="high-label label">VALVE TROMBONE</label>
+        <h2>$1200</h2>
+        <ol>
+          <li>Lorem, ipsum.</li>
+          <li>Lorem, ipsum.</li>
+          <li>Lorem, ipsum dolor.</li>
+          <li>Lorem, ipsum.</li>
+          <button class="btn">select</button>
+        </ol>
+      </div>
+    </div>
+    <footer>
+      <p id="footer">&copyOriginal Trombones</p>
+    </footer>
+  </body>
+</html>
